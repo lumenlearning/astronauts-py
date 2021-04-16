@@ -9,7 +9,6 @@ def lookupSpaceship(spaceships, spaceshipName):
 def assignToSpaceships(astronauts, spaceships):
     notYetAssigned = [];
     sortedAstronauts = sorted(astronauts, key = lambda i: i['applicationReceived'], reverse=True)
-    # print("sorted astros:", sortedAstronauts)
     for a in sortedAstronauts:
         firstChoiceShip = lookupSpaceship(spaceships, a['preferredShip'][0])
         if (firstChoiceShip['capacity'] == len(firstChoiceShip['assignedAstronauts'])):
