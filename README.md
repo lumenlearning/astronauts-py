@@ -25,18 +25,18 @@ The second step is to write up answers for the following questions:
 
 ## What is this code supposed to do?
 
-This program takes a number of astronauts in an array.  Each astronaut is an object in the form of:
+This program takes a number of astronauts in a list.  Each astronaut is a dictionary object in the form of:
 
 - *String name* the astronaut's full name
-- *Date applicationDate*: the date when the astronaut applied to be on a ship
-- *Array of String preferredShip*; a list of the names of each ship in the order that the astronaut would like to be stationed on them.  Every preferredShip is guaranteed to include all available spaceships and the strings are only spaceship names.
+- *Datetime applicationDate*: the date when the astronaut applied to be on a ship
+- *List of String preferredShip*; a list of the names of each ship in the order that the astronaut would like to be stationed on them.  Every preferredShip is guaranteed to include all available spaceships and the strings are only spaceship names.
 
 Then there are spaceships, in the form of:
 
 - *String name*: the spaceship's name
-- *Date expeditionDate*: the day when the spaceship will launch
+- *Datetime expeditionDate*: the day when the spaceship will launch
 - *Number capacity*: always a positive integer, the number of astronauts a spaceship can hold
-- *Array of astronaut objects*: originally an empty array, the function `assignToSpaceships` will add assigned astronauts to this array.
+- *List of astronaut objects*: originally an empty list, the function `assignToSpaceships` will add assigned astronauts to this list.
 
 Every astronaut is to be assigned to the spaceship based on when their application was received.  Every astronaut should be given their highest preferred spaceship which has not yet run out of capacity.  If the astronaut's first choice spaceship is full, then they should be placed on their second choice spaceship, and so on until they have been placed on a spaceship.
 
